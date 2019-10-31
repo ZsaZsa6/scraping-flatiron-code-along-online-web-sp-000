@@ -31,7 +31,7 @@ class Scraper
       course.description = post.css("p").text
     end
   end
-  
+
   def print_courses
     self.make_courses
     Course.all.each do |course|
@@ -46,3 +46,4 @@ class Scraper
 end
 
 Scraper.new.get_page
+Scraper.new.print_courses
